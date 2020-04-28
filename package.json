@@ -1,0 +1,24 @@
+{
+  "name": "tour-operator-credits-service",
+  "version": "0.0.1",
+  "description": "Cares about the credits which tour operators gives out to users",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holidaycheck/tour-operator-credits-service.git"
+  },
+  "keywords": [
+    "HolidayCheck",
+    "TourOperator",
+    "Gutschriften"
+  ],
+  "author": "HolidayCheck",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/holidaycheck/tour-operator-credits-service/issues"
+  },
+  "homepage": "https://github.com/holidaycheck/tour-operator-credits-service#readme"
+}
