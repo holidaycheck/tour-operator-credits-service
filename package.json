@@ -4,7 +4,9 @@
   "description": "Cares about the credits which tour operators gives out to users",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prettier": "prettier --single-quote --tab-width 4 --write \"{index,src/**/*}.js\"",
+    "test": "mocha",
+    "test:watch": "mocha --watch"
   },
   "repository": {
     "type": "git",
@@ -34,7 +36,12 @@
     "validator": "^13.0.0"
   },
   "devDependencies": {
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
+    "mocha": "7.1.2",
     "node-dev": "^4.0.0",
-    "prettier": "^2.0.4"
+    "prettier": "^2.0.4",
+    "sinon": "9.0.2",
+    "sinon-chai": "3.5.0"
   }
 }
