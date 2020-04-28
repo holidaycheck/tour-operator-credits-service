@@ -7,7 +7,9 @@ describe('a test example', () => {
         const expectedValue = new Error('A Test Error');
         const stubFn = sinon.stub().rejects(expectedValue);
 
-        await expect(exampleFn(stubFn)).to.be.rejectedWith(expectedValue.message);
+        await expect(exampleFn(stubFn)).to.be.rejectedWith(
+            expectedValue.message
+        );
         expect(stubFn.callCount).to.equal(1);
     });
 });

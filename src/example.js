@@ -1,1 +1,1 @@
-module.exports = cb => cb();
+module.exports = (cb) => cb();
