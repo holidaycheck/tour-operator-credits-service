@@ -1,0 +1,123 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: #000820;
+}
+
+p {
+    margin: 1.5em 0;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 55px;
+    text-align: center;
+}
+
+a {
+    color: #0e55cd;
+    text-decoration: none;
+}
+
+pre {
+    margin: auto;
+    background-color: #EDF0F2;
+    padding: 10px;
+}
+
+ul {
+    line-height: 24px;
+}
+
+input[type="file"] {
+    position: relative;
+    text-align: right;
+    -moz-opacity: 0;
+    filter:alpha(opacity: 0);
+    opacity: 0;
+    z-index: 0;
+}
+
+#header,
+#footer {
+    height: 50px;
+    background-color: #0e55cd
+}
+
+#content {
+    max-width: 996px;
+    margin: auto;
+    padding: 25px;
+}
+
+#tourOperatorLogo {
+    display: block;
+    margin: auto;
+}
+
+#example {
+    display: flex;
+    flex-direction: column;
+}
+
+#form {
+    text-align: center;
+    margin-top: 100px;
+}
+
+#result {
+    padding: 20px;
+    font-weight: bold;
+}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 100px;
+    transition: background 0.25s ease-in-out;
+    position: relative;
+    color: white;
+    text-transform: uppercase;
+    background-color: #0e55cd;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+    width: 240px;
+    height: 56px;
+    line-height: 56px;
+    margin-bottom: 18px;
+    outline:none;
+}
+
+.button:focus,
+.button:hover,
+.button:active {
+    color: white;
+    background-color: #09337b;
+}
+
+.file-inputs {
+    position: relative;
+    margin: auto;
+    display: inline-block;
+    min-height: 150px;
+    width: 240px;
+}
+
+.fake-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
