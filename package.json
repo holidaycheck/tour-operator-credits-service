@@ -32,7 +32,6 @@
     "express-async-handler": "^1.1.4",
     "pg": "^8.0.0",
     "pg-copy-streams": "2.2.2",
-    "uuid-validate": "0.0.3",
     "validator": "13.0.0"
   },
   "devDependencies": {

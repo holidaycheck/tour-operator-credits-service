@@ -1,4 +1,4 @@
-const isUuid = require('uuid-validate');
+const validator = require('validator');
 
 const { query } = require('../db/query');
 
@@ -9,7 +9,7 @@ module.exports = async ({ findBalance, logger }, req, res) => {
 
     const { tourOperatorId, email, code } = req.query;
 
-    if (!(tourOperatorId && isUuid(tourOperatorId) && email)) {
+    if (!(tourOperatorId && validator.isUUID(tourOperatorId) && email)) {
         return res.json(defaultValue);
     }
 
