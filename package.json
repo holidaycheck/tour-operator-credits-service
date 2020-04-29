@@ -1,0 +1,53 @@
+{
+  "name": "tour-operator-credits-service",
+  "version": "0.0.1",
+  "description": "Cares about the credits which tour operators gives out to users",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier --single-quote --tab-width 4 --write \"{index,src/**/*}.js\"",
+    "test": "mocha",
+    "test:watch": "mocha --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holidaycheck/tour-operator-credits-service.git"
+  },
+  "keywords": [
+    "HolidayCheck",
+    "TourOperator",
+    "Gutschriften"
+  ],
+  "author": "HolidayCheck",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/holidaycheck/tour-operator-credits-service/issues"
+  },
+  "homepage": "https://github.com/holidaycheck/tour-operator-credits-service#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "body-parser-csv": "^1.0.0",
+    "bunyan": "1.8.12",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "pg": "^8.0.0",
+    "pg-copy-streams": "2.2.2",
+    "uuid-validate": "0.0.3",
+    "validator": "^13.0.0"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
+    "husky": "4.2.5",
+    "mocha": "7.1.2",
+    "node-dev": "^4.0.0",
+    "prettier": "^2.0.4",
+    "sinon": "9.0.2",
+    "sinon-chai": "3.5.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier"
+    }
+  }
+}
