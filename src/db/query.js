@@ -11,5 +11,5 @@ const getConnection = () => pool.connect();
 
 module.exports = {
     query,
-    getConnection,
+    getConnection
 };
