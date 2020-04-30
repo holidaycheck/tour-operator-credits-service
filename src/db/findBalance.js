@@ -4,7 +4,7 @@ module.exports = async ({ query }, tourOperatorId, email, code) => {
     SELECT
         id,
         amount,
-        currencyCode as "currencyCode"
+        currencyCode
     FROM credits
     WHERE
         tourOperatorId = $1
