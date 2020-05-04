@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Veranstalter Gutscheine</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <meta name="robots" content="noindex, follow" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=PT+Sans:wght@400&display=swap"
+        rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet"/>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="content">
+        <img id="tourOperatorLogo" alt=""/>
+        <h1>
+            Veranstalter Gutscheine
+        </h1>
+        <div id=explanation>
+            <p>
+                Um unseren Urlaubern zu ermöglichen, bei einer Buchung direkt einen von Ihnen ausgegebenen Gutschein zu
+                verwenden, können Sie hier die dafür benötigten Daten zur Verfügung stellen.
+                Laden Sie dazu hier eine <code>.csv</code> Datei mit den folgenden Spalten hoch:
+            </p>
+            <ul>
+                <li>email: Die bei der Buchung verwendete E-Mail Adresse des Urlaubers</li>
+                <li>amount: Der Wert des Gutscheins</li>
+                <li>currencyCode: Das <a href="https://de.wikipedia.org/wiki/ISO_4217" target="_blank">3-Buchstaben Kürzel</a>
+                    der Währung, in der der Gutschein ausgestellt wurde</li>
+                <li>code (optional): Der Gutschein-Code, den der Urlauber angeben muss. Dieses Feld kann auch leer
+                    gelassen werden, dann kann der Gutschein durch den Urlauber ohne code eingelöst werden.</li>
+                <li>validUntilDate (optional): Das Datum, bis zu dem der Gutschein seine Gültigkeit behält. Wenn diese
+                    Spalte leer gelassen wird, läuft der Gutschein bis zu seiner Einlösung nie ab. Das Datum muss dabei
+                    in folgendem Format angegeben werden: <code>YYYY-MM-DD</code></li>
+                <li>tourOperatorInternalNumber (optional): Ihre Vorgangsnummer der stornierten Buchung, für die der
+                    Gutschein ausgestellt wurde</li>
+            </ul>
+            <p>
+                Optionale Spalten dürfen dabei nicht ganz weggelassen werden, sondern müssen leer sein. Die Reihenfolge
+                der Spalten muss eingehalten werden.
+            </p>
+            <p>
+                Die Gutscheine können sofort von den Urlaubern verwendet werden.
+            </p>
+            <div id="example">
+                <p>Beispiel:</p>
+                <pre>email,amount,currencyCode,code,validUntilDate,tourOperatorInternalNumber
+urlauber1@test.com,233.12,EUR,COR-12345,2021-12-31,123456789
+urlauber2@test.com,11.00,CHF,,,</pre>
+            </div>
+        </div>
+        <div id="form">
+            <div>
+                <div class="file-inputs">
+                    <input type="file" class="hidden-input" accept=".csv" id="inputFile" />
+                    <div class="fake-input">
+                        <label for="inputFile" class="button">CSV auswählen</label>
+                        <div id="fileName">Keine Datei ausgewählt</div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="upload" name="submit" class="button">Abschicken</button>
+        </div>
+        <div id="result"></div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>
