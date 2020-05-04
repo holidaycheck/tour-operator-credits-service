@@ -32,6 +32,7 @@
     "express-async-handler": "^1.1.4",
     "pg": "^8.0.0",
     "pg-copy-streams": "2.2.2",
+    "supertest": "4.0.2",
     "validator": "13.0.0"
   },
   "devDependencies": {
