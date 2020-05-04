@@ -1,0 +1,22 @@
+version: "3.3"
+services:
+  database:
+    build: database
+    environment:
+      POSTGRES_PASSWORD: secret
+      TOUR_OPERATOR_CREDITS_USER: tour_operator_credits
+      TOUR_OPERATOR_CREDITS_PASSWORD: passw0rd!
+      TOUR_OPERATOR_CREDITS_DATABASE: tour_operator_credits
+  service:
+    build: ""
+    image: SERVICE_IMAGE_NAME
+    environment:
+      PGHOST: tour-operator-service_database_1
+      PGPORT: 5432
+      PGDATABASE: tour_operator_credits
+      PGUSER: tour_operator_credits
+      PGPASSWORD: passw0rd!
+    depends_on:
+      - database
+    ports:
+      - "3000:3000"

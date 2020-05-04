@@ -120,6 +120,20 @@ needs a restart.
 - `npm run dev`: Start service connected to a temporary database. 
 Restarts automatically when code has changed.
 - `npm prettier`: Formats the code. Also executed before any commit.
+Cares about the credits which tour operators gives out to users
+
+#### Run the service locally
+To run the service locally simply call
+```shell script
+./run.sh
+```
+This will spin up docker containers running a local database and a local instance of the service.
+You can then perform any calls like described in the [Usage section](#Usage).
+
+To stop the containers use
+```shell script
+    docker-compose down
+```
 
 ## Database
 
