@@ -1,0 +1,10 @@
+node_modules
+Dockerfile
+.git
+.idea
+.github
+.database
+.nvmrc
+.gitignore
+LICENSE
+README.md

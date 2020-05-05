@@ -119,7 +119,34 @@ needs a restart.
 - `npm install`: Install all required dependencies.
 - `npm run dev`: Start service connected to a temporary database. 
 Restarts automatically when code has changed.
-- `npm prettier`: Formats the code. Also executed before any commit.
+- `npm run prettier`: Formats the code. Also executed before any commit.
+
+#### Run the service with Docker
+To run the service locally simply call
+```shell script
+docker-compose up -d
+```
+This will spin up docker containers running a local database and a local instance of the service.
+You can then perform any calls like described in the [Usage section](#Usage).
+Alternatively you can use
+```shell script
+docker-compose up -d --build
+```
+To be sure that the images are newly built, e.g. if you made any changes.
+
+To stop and remove the containers use
+```shell script
+    docker-compose down
+```
+This will also delete any data that was inserted to the local database.
+
+Alternatively you can use
+```shell script
+    docker-compose stop
+```
+to only stop the containers.
+
+Also refer to the docker-compose [documentation](https://docs.docker.com/compose/reference/overview/).
 
 ## Database
 
