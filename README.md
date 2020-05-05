@@ -3,7 +3,7 @@
 ## Purpose
 
 Some tour operators give customers a voucher/coupon/credit in case of a canceled booking 
-instead paying them back their money directly. The customer can use the credit to pay future 
+instead of paying them back their money directly. The customer can use the credit to pay future 
 travels partly or completely with the same tour operator.
 
 Online travel agencies have the issue, that there is no generic possibility to validate the 
