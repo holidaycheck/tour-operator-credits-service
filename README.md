@@ -119,7 +119,7 @@ needs a restart.
 - `npm install`: Install all required dependencies.
 - `npm run dev`: Start service connected to a temporary database. 
 Restarts automatically when code has changed.
-- `npm prettier`: Formats the code. Also executed before any commit.
+- `npm run prettier`: Formats the code. Also executed before any commit.
 
 #### Run the service with Docker
 To run the service locally simply call
