@@ -6,7 +6,9 @@
   "scripts": {
     "prettier": "prettier --single-quote --tab-width 4 --write \"{index,src/**/*}.js\"",
     "test": "mocha",
-    "test:watch": "mocha --watch"
+    "test:watch": "mocha --watch",
+    "dev:db": "docker run -p 5432:5432 --rm -e POSTGRES_PASSWORD=secret -e TOUR_OPERATOR_CREDITS_USER=tour_operator_credits -e TOUR_OPERATOR_CREDITS_PASSWORD=passw0rd! -e TOUR_OPERATOR_CREDITS_DATABASE=tour_operator_credits  $(docker build -q ./database)",
+    "dev": "concurrently \"npm run dev:db\" \"node-dev index.js\""
   },
   "repository": {
     "type": "git",
@@ -38,6 +40,7 @@
   "devDependencies": {
     "chai": "4.2.0",
     "chai-as-promised": "7.1.1",
+    "concurrently": "5.2.0",
     "husky": "4.2.5",
     "mocha": "7.1.2",
     "node-dev": "^4.0.0",
