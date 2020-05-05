@@ -2,16 +2,17 @@ version: "3.3"
 services:
   database:
     build: database
+    container_name: tour_operator_credits_database
     environment:
       POSTGRES_PASSWORD: secret
       TOUR_OPERATOR_CREDITS_USER: tour_operator_credits
       TOUR_OPERATOR_CREDITS_PASSWORD: passw0rd!
       TOUR_OPERATOR_CREDITS_DATABASE: tour_operator_credits
   service:
-    build: ""
-    image: SERVICE_IMAGE_NAME
+    build: .
+    container_name: tour_operator_credits_service
     environment:
-      PGHOST: tour-operator-service_database_1
+      PGHOST: tour_operator_credits_database
       PGPORT: 5432
       PGDATABASE: tour_operator_credits
       PGUSER: tour_operator_credits
