@@ -98,7 +98,7 @@ working and the table in the database can be accessed. Otherwise it will return 
 It will also return a 503 when the service is getting shut down and should not receive any new
 requests.
 
-Useful for an load balancer to find out, if the service is ready to accept traffic.
+Useful for a load balancer to find out, if the service is ready to accept traffic.
 
 ### GET /_health
 
