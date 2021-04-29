@@ -1,3 +1,5 @@
+# DEPRECATED This project is not maintained anymore
+
 # tour-operator-credits-service
 
 ## Purpose
